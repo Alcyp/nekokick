@@ -1094,6 +1094,9 @@ MonoBehaviour:
   gravity: 11.5
   g: 0
   spawnObjects: {fileID: 0}
+  spawnObjects1: {fileID: 0}
+  spawnObjects2: {fileID: 0}
+  spawnObjects3: {fileID: 0}
   splash: {fileID: 0}
 --- !u!1 &1024797201
 GameObject:
@@ -1605,6 +1608,9 @@ MonoBehaviour:
   gravity: 11.5
   g: 0
   spawnObjects: {fileID: 586635727}
+  spawnObjects1: {fileID: 586635730}
+  spawnObjects2: {fileID: 586635729}
+  spawnObjects3: {fileID: 586635728}
   splash: {fileID: 442012587}
 --- !u!1001 &1808390105
 PrefabInstance:

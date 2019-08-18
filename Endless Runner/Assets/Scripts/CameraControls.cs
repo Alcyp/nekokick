@@ -15,6 +15,9 @@ public class CameraControls : MonoBehaviour
     public float g;
 
     public SpawnObjects spawnObjects;
+    public SpawnObjects spawnObjects1;
+    public SpawnObjects spawnObjects2;
+    public SpawnObjects spawnObjects3;
     public GameObject splash;
 
     void Start()
@@ -43,6 +46,9 @@ public class CameraControls : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             spawnObjects.activate = true;
+            spawnObjects1.activate = true;
+            spawnObjects2.activate = true;
+            spawnObjects3.activate = true;
             splash.SetActive(false);
         }
     }
