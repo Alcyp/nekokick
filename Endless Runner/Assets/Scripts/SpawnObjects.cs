@@ -10,6 +10,7 @@ public class SpawnObjects : MonoBehaviour
     public GameObject baseTree;
     public bool verticalRot;
     public bool normalRot;
+    public bool activate = false;
 
     private void Start()
     {
@@ -27,14 +28,16 @@ public class SpawnObjects : MonoBehaviour
 
     void Update()
     {
-        spawnTimer -= Time.deltaTime;
-        if (spawnTimer < 0)
+        if (activate)
         {
-            spawnTimer = spawnRate;
-            spawnObject(100f);
+            spawnTimer -= Time.deltaTime;
+            if (spawnTimer < 0)
+            {
+                spawnTimer = spawnRate;
+                spawnObject(100f);
+            }
+            if (spawnRate > 0) { spawnRate -= spawnRateSpeed * Time.deltaTime; }
         }
-        if (spawnRate > 0) { spawnRate -= spawnRateSpeed * Time.deltaTime; }
-        
     }
 
     void spawnObject(float distance)
@@ -57,6 +60,11 @@ public class SpawnObjects : MonoBehaviour
             newObject.transform.eulerAngles = temp;
         }
 
-        newObject.GetComponent<MoveObject>().move = true;
+        newObject.GetComponent<MoveObject>().instance = true;
+    }
+
+    void Activate()
+    {
+        activate = true;
     }
 }
