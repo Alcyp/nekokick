@@ -34,3 +34,4 @@ ExportedObj/
 # Builds
 *.apk
 *.unitypackage
+*.log
