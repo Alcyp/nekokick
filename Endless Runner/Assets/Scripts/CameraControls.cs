@@ -19,6 +19,7 @@ public class CameraControls : MonoBehaviour
     public SpawnObjects spawnObjects2;
     public SpawnObjects spawnObjects3;
     public GameObject splash;
+    public GameObject hud;
 
     void Start()
     {
@@ -50,6 +51,7 @@ public class CameraControls : MonoBehaviour
             spawnObjects2.activate = true;
             spawnObjects3.activate = true;
             splash.SetActive(false);
+            hud.SetActive(true);
         }
     }
 }
